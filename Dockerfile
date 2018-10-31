@@ -11,5 +11,4 @@ RUN curl https://glide.sh/get | sh
 RUN cd /go/src/github.com/jscastelblancoh/users_service && glide install
 
 #ENTRYPOINT  watcher -run github.com/jscastelblancoh/users_service/user/cmd -watch github.com/jscastelblancoh/users_service/user
-
 ENTRYPOINT go run src/github.com/jscastelblancoh/users_service/users/cmd/main.go
