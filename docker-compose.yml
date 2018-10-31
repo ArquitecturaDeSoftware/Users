@@ -1,11 +1,7 @@
 version: "2"
 services:
   users:
-    build:
-      context: .
-    restart: always
-    volumes:
-    - .:/go/src/github.com/jscastelblancoh/users_service/examples
+    build: .
     container_name: users
     ports:
     - 8800:8081
