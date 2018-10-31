@@ -5,7 +5,7 @@ services:
       context: .
     restart: always
     volumes:
-    - .:/go/src/github.com/kujtimiihoxha/todo-gokit-demo/examples
+    - .:/go/src/github.com/jscastelblancoh/users_service/examples
     container_name: users
     ports:
     - 8800:8081
