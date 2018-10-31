@@ -1,0 +1,20 @@
+version: "2"
+services:
+  users:
+    build:
+      context: .
+    restart: always
+    volumes:
+    - .:/go/src/github.com/kujtimiihoxha/todo-gokit-demo/examples
+    container_name: users
+    ports:
+    - 8800:8081
+  mongodb:
+    command: mongod --smallfiles --logpath=/dev/null
+    container_name: mongodb
+    environment:
+    - MONGO_DATA_DIR=/data/db
+    - MONGO_LOG_DIR=/dev/null
+    image: mongo:latest
+    ports:
+    - 27017:27017

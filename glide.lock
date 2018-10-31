@@ -1,0 +1,200 @@
+hash: b599d4aabee63ece944b45d993e4affa701c93bba743a2f88c7c74a323441e46
+updated: 2018-10-30T18:14:29.684846411-05:00
+imports:
+- name: github.com/apache/thrift
+  version: da1169d75b154e48871851ea8d731fccb0876fe7
+  subpackages:
+  - lib/go/thrift
+- name: github.com/beorn7/perks
+  version: 3a771d992973f24aa725d07868b467d1ddfceafb
+  subpackages:
+  - quantile
+- name: github.com/DataDog/zstd
+  version: c7161f8c63c045cbc7ca051dcc969dd0e4054de2
+- name: github.com/davecgh/go-spew
+  version: d8f796af33cc11cb798c1aaeb27a4ebc5099927d
+  subpackages:
+  - spew
+- name: github.com/eapache/go-resiliency
+  version: ea41b0fad31007accc7f806884dcdf3da98b79ce
+  subpackages:
+  - breaker
+- name: github.com/eapache/go-xerial-snappy
+  version: 776d5712da21bc4762676d614db1d8a64f4238b0
+- name: github.com/eapache/queue
+  version: 093482f3f8ce946c05bcba64badd2c82369e084d
+- name: github.com/go-kit/kit
+  version: ca4112baa34cb55091301bdc13b1420a122b1b9e
+  subpackages:
+  - endpoint
+  - log
+  - metrics
+  - metrics/internal/lv
+  - metrics/prometheus
+  - tracing/opentracing
+  - transport/http
+- name: github.com/go-logfmt/logfmt
+  version: 390ab7935ee28ec6b286364bba9b4dd6410cb3d5
+- name: github.com/go-stack/stack
+  version: 2fee6af1a9795aafbe0253a0cfbdf668e1fb8a9a
+- name: github.com/gogo/protobuf
+  version: e87afe3c25daf6fa321fed3705938e53672b0a3b
+  subpackages:
+  - io
+  - proto
+- name: github.com/golang/protobuf
+  version: 1918e1ff6ffd2be7bed0553df8650672c3bfe80d
+  subpackages:
+  - proto
+  - protoc-gen-go/descriptor
+  - ptypes
+  - ptypes/any
+  - ptypes/duration
+  - ptypes/timestamp
+- name: github.com/golang/snappy
+  version: 2e65f85255dbc3072edf28d6b5b8efc472979f5a
+- name: github.com/gorilla/context
+  version: 51ce91d2eaddeca0ef29a71d766bb3634dadf729
+- name: github.com/gorilla/handlers
+  version: 7e0847f9db758cdebd26c149d0ae9d5d0b9c98ce
+- name: github.com/gorilla/mux
+  version: e3702bed27f0d39777b0b37b664b6280e8ef8fbf
+- name: github.com/kr/logfmt
+  version: b84e30acd515aadc4b783ad4ff83aff3299bdfe0
+- name: github.com/lightstep/lightstep-tracer-go
+  version: f8e62c4822c065808cbef7fe9e8f3deae49711d4
+  subpackages:
+  - collectorpb
+  - lightstep/rand
+  - lightstep_thrift
+  - lightsteppb
+- name: github.com/lightstep/thrift
+  version: de6c3c01b88c1fc8ae76cec4a30f0441ef55a4a4
+  subpackages:
+  - lib/go/thrift
+- name: github.com/matttproud/golang_protobuf_extensions
+  version: c12348ce28de40eed0136aa2b644d0ee0650e56c
+  subpackages:
+  - pbutil
+- name: github.com/oklog/oklog
+  version: ca7cdf51fb41fbc290986e9a24db4fa644ab0714
+  subpackages:
+  - pkg/group
+- name: github.com/oklog/run
+  version: 6934b124db28979da51d3470dadfa34d73d72652
+- name: github.com/opentracing-contrib/go-observer
+  version: a52f2342449246d5bcc273e65cbdcfa5f7d6c63c
+- name: github.com/opentracing/basictracer-go
+  version: 98b91394c2def4a44acff5e100538b4812f2f694
+  subpackages:
+  - wire
+- name: github.com/opentracing/opentracing-go
+  version: be550b025b433cdfa2f11efb962afa2ea3c4d967
+  subpackages:
+  - ext
+  - log
+- name: github.com/openzipkin-contrib/zipkin-go-opentracing
+  version: b85dc675b16b116a00c351d2c41305bf9ae71293
+  subpackages:
+  - flag
+  - thrift/gen-go/scribe
+  - thrift/gen-go/zipkincore
+  - types
+  - wire
+- name: github.com/openzipkin/zipkin-go-opentracing
+  version: b85dc675b16b116a00c351d2c41305bf9ae71293
+- name: github.com/pierrec/lz4
+  version: 623b5a2f4d2a41e411730dcdfbfdaeb5c0c4564e
+  subpackages:
+  - internal/xxh32
+- name: github.com/prometheus/client_golang
+  version: f30f428035633da15d00d3dfefb0128c5e569ef4
+  subpackages:
+  - prometheus
+  - prometheus/internal
+  - prometheus/promhttp
+- name: github.com/prometheus/client_model
+  version: 5c3871d89910bfb32f5fcab2aa4b9ec68e65a99f
+  subpackages:
+  - go
+- name: github.com/prometheus/common
+  version: 7e9e6cabbd393fc208072eedef99188d0ce788b6
+  subpackages:
+  - expfmt
+  - internal/bitbucket.org/ww/goautoneg
+  - model
+- name: github.com/prometheus/procfs
+  version: 185b4288413d2a0dd0806f78c90dde719829e5ae
+  subpackages:
+  - internal/util
+  - nfs
+  - xfs
+- name: github.com/rcrowley/go-metrics
+  version: 3113b8401b8a98917cde58f8bbd42a1b1c03b1fd
+- name: github.com/Shopify/sarama
+  version: f3f4f5f1acf1a26acb582cfb158c2433f37288b4
+- name: golang.org/x/net
+  version: c44066c5c816ec500d459a2a324a753f78531ae0
+  subpackages:
+  - context
+  - http/httpguts
+  - http2
+  - http2/hpack
+  - idna
+  - internal/timeseries
+  - trace
+- name: golang.org/x/sys
+  version: 7e31e0c00fa05cb5fbf4347b585621d6709e19a4
+  subpackages:
+  - unix
+- name: golang.org/x/text
+  version: 6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2
+  subpackages:
+  - secure/bidirule
+  - transform
+  - unicode/bidi
+  - unicode/norm
+- name: google.golang.org/genproto
+  version: b69ba1387ce2108ac9bc8e8e5e5a46e7d5c72313
+  subpackages:
+  - googleapis/api/annotations
+  - googleapis/rpc/status
+- name: google.golang.org/grpc
+  version: ec76f14f6fe57fbf1785662712118ecd98ec85d1
+  subpackages:
+  - balancer
+  - balancer/base
+  - balancer/roundrobin
+  - codes
+  - connectivity
+  - credentials
+  - encoding
+  - encoding/proto
+  - grpclog
+  - internal
+  - internal/backoff
+  - internal/channelz
+  - internal/envconfig
+  - internal/grpcrand
+  - internal/transport
+  - keepalive
+  - metadata
+  - naming
+  - peer
+  - resolver
+  - resolver/dns
+  - resolver/passthrough
+  - stats
+  - status
+  - tap
+- name: gopkg.in/mgo.v2
+  version: 9856a29383ce1c59f308dd1cf0363a79b5bef6b5
+  subpackages:
+  - bson
+  - internal/json
+- name: sourcegraph.com/sourcegraph/appdash
+  version: 4c381bd170b46de54530ae6170358c98fdaa515f
+  subpackages:
+  - internal/wire
+  - opentracing
+testImports: []
