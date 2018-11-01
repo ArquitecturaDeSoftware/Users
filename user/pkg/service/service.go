@@ -25,7 +25,7 @@ func (b *basicUserService) GetbyId(ctx context.Context, id string) (t []io.User,
 	}
 	defer session.Close()
 	c := session.DB("user_service").C("users")
-	err = c.Find(bson.M{"_id": bson.ObjectIdHex(id)}).All(&t)
+	err = c.Find(bson.M{"cedula": id}).All(&t)
 	return t, err
 }
 func (b *basicUserService) Post(ctx context.Context, statistic io.User) (t io.User, err error) {
