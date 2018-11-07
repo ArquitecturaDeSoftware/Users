@@ -43,9 +43,9 @@ func (l loggingMiddleware) Delete(ctx context.Context, id string) (err error) {
 	return l.next.Delete(ctx, id)
 }
 
-func (l loggingMiddleware) Put(ctx context.Context, id string, user io.User) (error error) {
+func (l loggingMiddleware) Put(ctx context.Context, id string, update io.Update) (error error) {
 	defer func() {
-		l.logger.Log("method", "Put", "id", id, "user", user, "error", error)
+		l.logger.Log("method", "Put", "id", id, "update", update, "error", error)
 	}()
-	return l.next.Put(ctx, id, user)
+	return l.next.Put(ctx, id, update)
 }

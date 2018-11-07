@@ -134,14 +134,10 @@ func decodePutRequest(_ context.Context, r *http1.Request) (interface{}, error) 
 	body, _ := ioutil.ReadAll(r.Body)
 	r.Body = ioutil.NopCloser(bytes.NewBuffer(body))
 
-	var req2 io.User
+	var req2 io.Update
 	req := endpoint.PutRequest{}
 	err := json.Unmarshal(body, &req2)
-	req.User.ID = req2.ID
-	req.User.Cedula = req2.Cedula
-	req.User.Name = req2.Name
-	req.User.LunchroomID = req2.LunchroomID
-	req.User.ActiveTicket = req2.ActiveTicket
+	req.Update.ActiveTicket = req2.ActiveTicket
 	req.Id = id
 
 	return req, err

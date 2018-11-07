@@ -13,7 +13,7 @@ type UserService interface {
 	GetbyId(ctx context.Context, id string) (t []io.User, err error)
 	Post(ctx context.Context, statistic io.User) (t io.User, err error)
 	Delete(ctx context.Context, id string) (err error)
-	Put(ctx context.Context, id string, user io.User) (error error)
+	Put(ctx context.Context, id string, update io.Update) (error error)
 }
 
 type basicUserService struct{}
@@ -48,17 +48,14 @@ func (b *basicUserService) Delete(ctx context.Context, id string) (err error) {
 	c := session.DB("user_service").C("users")
 	return c.Remove(bson.M{"_id": bson.ObjectIdHex(id)})
 }
-func (b *basicUserService) Put(ctx context.Context, id string, user io.User) (error error) {
+func (b *basicUserService) Put(ctx context.Context, id string, update io.Update) (error error) {
 	session, err := db.GetMongoSession()
 	if err != nil {
 		return err
 	}
 	defer session.Close()
 	c := session.DB("user_service").C("users")
-	c.Update(bson.M{"_id": bson.ObjectIdHex(id)}, bson.M{"$set": bson.M{"name": user.Name}})
-	c.Update(bson.M{"_id": bson.ObjectIdHex(id)}, bson.M{"$set": bson.M{"cedula": user.Cedula}})
-	c.Update(bson.M{"_id": bson.ObjectIdHex(id)}, bson.M{"$set": bson.M{"lunchroom_id": user.LunchroomID}})
-	return c.Update(bson.M{"_id": bson.ObjectIdHex(id)}, bson.M{"$set": bson.M{"active_ticket": user.ActiveTicket}})
+	return c.Update(bson.M{"_id": bson.ObjectIdHex(id)}, bson.M{"$set": bson.M{"active_ticket": update.ActiveTicket}})
 }
 
 // NewBasicUserService returns a naive, stateless implementation of UserService.

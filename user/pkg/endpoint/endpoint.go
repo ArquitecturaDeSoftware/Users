@@ -127,8 +127,8 @@ func (e Endpoints) Delete(ctx context.Context, id string) (err error) {
 
 // PutRequest collects the request parameters for the Put method.
 type PutRequest struct {
-	Id   string  `json:"id"`
-	User io.User `json:"user"`
+	Id     string    `json:"id"`
+	Update io.Update `json:"update"`
 }
 
 // PutResponse collects the response parameters for the Put method.
@@ -140,7 +140,7 @@ type PutResponse struct {
 func MakePutEndpoint(s service.UserService) endpoint.Endpoint {
 	return func(ctx context.Context, request interface{}) (interface{}, error) {
 		req := request.(PutRequest)
-		error := s.Put(ctx, req.Id, req.User)
+		error := s.Put(ctx, req.Id, req.Update)
 		return PutResponse{Error: error}, nil
 	}
 }
@@ -151,10 +151,10 @@ func (r PutResponse) Failed() error {
 }
 
 // Put implements Service. Primarily useful in a client.
-func (e Endpoints) Put(ctx context.Context, id string, user io.User) (error error) {
+func (e Endpoints) Put(ctx context.Context, id string, update io.Update) (error error) {
 	request := PutRequest{
-		Id:   id,
-		User: user,
+		Id:     id,
+		Update: update,
 	}
 	response, err := e.PutEndpoint(ctx, request)
 	if err != nil {
